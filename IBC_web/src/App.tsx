@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { StudioPage } from './StudioPage'
+import { StudioPage } from './sanity/StudioPage'
 import Home from './pages/Home'
 import './App.css'
 
