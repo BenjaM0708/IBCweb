@@ -12,7 +12,7 @@ const [ loading, setLoading ] = useState(true)
         const fetchPost = async () => {
             try {
                 setLoading(true)
-                const query = '*[_type == "post" && 1(_id in drafts.**)] | order(_createdAt desc)'
+                const query = `*[_type == "post" && !(_id in path('drafts.**'))] | order(_createdAt desc)`
 
                 const data = await client.fetch<Post[]>(query)
                 setPosts(data)
@@ -33,9 +33,9 @@ const [ loading, setLoading ] = useState(true)
     return(
         <>
          <div  className="max-w-4xl mx-auto px-4 py-8">
-            <h1 className="text-3xl font-extrabold text-gray-900 mb-8 border-b pb-4">
+            <h2 className="text-xl font-extrabold text-gray-900 mb-8 border-b pb-4">
                 Últimos Artículos
-            </h1>
+            </h2>
 
             {posts.length === 0 ? ( <p className="text-gray-600">No hay ningún artículo publicado todavía.</p>
                 ) : (
@@ -59,3 +59,4 @@ const [ loading, setLoading ] = useState(true)
         </>
     )
 }
+
