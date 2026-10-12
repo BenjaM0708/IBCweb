@@ -12,9 +12,9 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollTop />
-      <div className='bg-white min-h-screen'>
+      <div className='bg-white min-h-screen flex flex-col'>
         <Navbar />
-        <main>
+        <main className='grow pt-14'>
           <Routes>
             {/* Normal Route */}
             <Route path="/" element={<Home />} />
