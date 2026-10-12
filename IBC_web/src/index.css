@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+  --color-gray-l: #9CA0A7;
+  --color-gray-m: #8A8B8F;
+  --color-gray-d: #747B83;
+
+  --color-red-m: #662424;
+  --color-red-d: #1C0C0C;
+
+  --font-sans: 'Roboto', sans-serif;
+  --font-display: 'Cinzel', serif;
+}
+
+body {
+  background-color: white;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
