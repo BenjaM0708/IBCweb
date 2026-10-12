@@ -1,47 +1,63 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import ibcLogo from "../assets/logos/Nombre-IBC-retransmision-B-1024x373.png";
 
-function Navbar() {
-  const [hidden, setHidden] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const lastScrollY = useRef(0);
-  const pathLocation = useLocation();
+  function Navbar() {
+    const [hidden, setHidden] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const lastScrollY = useRef(0);
+    const pathLocation = useLocation();
 
-  useEffect(() => {
-    lastScrollY.current = window.scrollY;
 
-    const handleScroll = () => {
-      const currentY = window.scrollY;
-      const scrollingDown = currentY > lastScrollY.current;
+    const SCROLL_THRESHOLD = 15; 
 
-      if (currentY <= 70) {
-        setHidden(false);
-      } else {
-        // Si el menú móvil está abierto, no escondemos el navbar
-        setHidden(scrollingDown && !menuOpen);
-      }
+    useEffect(() => {
+      lastScrollY.current = window.scrollY;
 
-      lastScrollY.current = currentY;
-    };
+      const handleScroll = () => {
+        const currentY = window.scrollY;
+        const difference = currentY - lastScrollY.current;
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [menuOpen]); // Añadido menuOpen como dependencia para pausar la ocultación si está desplegado
+        if (currentY <= 70) {
+          setHidden(false);
+          lastScrollY.current = currentY;
+          return;
+        }
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathLocation]);
+        if (menuOpen) return;
+
+    
+        if (Math.abs(difference) > SCROLL_THRESHOLD) {
+          if (difference > 0) {
+            // Bajando: ocultamos
+            setHidden(true);
+          } else {
+            // Subiendo: mostramos
+            setHidden(false);
+          }
+        
+          lastScrollY.current = currentY;
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, [menuOpen]);
+
+    useEffect(() => {
+      setMenuOpen(false);
+    }, [pathLocation]);
 
   return (
-    /* CAMBIO AQUÍ: Se usa '-translate-y-full' para esconderlo hacia ARRIBA */
+    
     <nav className={`fixed top-0 inset-x-0 z-50 transition-transform duration-500 backdrop-blur-md ${hidden && !menuOpen ? '-translate-y-full' : 'translate-y-0'}`}>
       <div className="ibc-navbar-shell bg-red-m mx-auto flex items-center justify-between">
 
         <Link to="/" className="font-display text-2xl font-bold flex items-center gap-2">
-          <img src='' alt="logo" className="h-8 w-auto"/>
+          <img src={ibcLogo} alt="Iglesia Bautista Calvario" className="h-8 w-auto" />
         </Link>
 
-        {/* Menú Desplegable Móvil (Funciona perfecto porque hereda el contexto del contenedor fixed) */}
+        {/* Burger Menu */}
         <div
           className={`md:hidden absolute top-full left-0 right-0 mt-0 shadow-lg backdrop-blur-md
           overflow-hidden transition-all duration-500 ease-in-out

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@layer properties, theme, sui, base, components, utilities;
 @import "tailwindcss";
 
 @theme {
@@ -14,9 +15,6 @@
 }
 
 @layer base {
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
 
   html, body, #root {
     margin: 0;
@@ -41,7 +39,7 @@
 
 @layer components {
   .ibc-navbar-shell {
-    padding: 30px 30px;
+    padding: 20px 30px;
   }
 
   .ibc-navbar-menu {
@@ -49,10 +47,10 @@
   }
 
   .ibc-footer-shell {
-    padding: 20px;
+    padding: 10px;
   }
 
   .ibc-footer-links {
-    padding: 20px;
+    padding: 5px;
   }
 }

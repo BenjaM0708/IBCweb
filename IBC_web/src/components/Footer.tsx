@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ibcLogo from '../assets/logos/Nombre-IBC-retransmision-B-1024x373.png'
 
 export default function Footer() {
 
@@ -8,10 +9,7 @@ export default function Footer() {
     
                         {/* Logo and copyright */}
                         <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-full bg-brand-light flex items-center justify-center">
-                                <img src="" alt="IBC logo" className="h-5 w-auto" />
-                            </div>
-                            <span className="font-display text-brand-light font-semibold">IBC</span>
+                            <img src={ibcLogo} alt="Iglesia Bautista Calvario" className="h-7 w-auto" />
                             <span className="text-brand-light/40 text-sm ml-2">© 2026</span>
                         </div>
     
