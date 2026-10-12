@@ -45,7 +45,6 @@ function Navbar() {
 
         <Link to="/" className={`font-display text-2xl font-bold ${theme.logo} flex items-center gap-2`}>
           <img src={theme.img} alt="logo" className="h-8 w-auto"/>
-          OnMove
         </Link>
 
         {/*//Nomal Navbar*/}

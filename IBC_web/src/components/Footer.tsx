@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
 
   return (
-    <footer className="bg-brand-dark">
-        <div className="max-w-5xl mx-auto px-6 py-2 flex flex-col md:flex-row items-center justify-between gap-6">
+    <footer className="bg-red-d">
+        <div className="bg-red-d max-w-5xl mx-auto px-6 py-2 flex flex-col md:flex-row items-center justify-between gap-6">
     
                         {/* Logo and copyright */}
                         <div className="flex items-center gap-2">
@@ -17,10 +17,10 @@ export default function Footer() {
     
                         {/* Links */}
                         <div className="flex items-center gap-6">
-                            <Link to="/terms" className="text-brand-light/60 text-sm hover:text-brand-light transition-colors">
+                            <Link to="/terms" className="text-brand-light text-sm hover:text-brand-light/40 transition-colors">
                                 Terms & Conditions
                             </Link>
-                            <Link to="/privacy" className="text-brand-light/60 text-sm hover:text-brand-light transition-colors">
+                            <Link to="/privacy" className="text-brand-light text-sm hover:text-black/90 transition-colors">
                                 Privacy Policy
                             </Link>
                         </div>
