@@ -1,11 +1,13 @@
+import './App.css'
+import { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { StudioPage } from './sanity/StudioPage'
 import { ScrollTop } from './components/ScrollTop'
 import Home from './pages/Home'
 import ErrorPage from './pages/ErrorPage'
 import Navbar from './components/Navbar'
-import './App.css'
 import Footer from './components/Footer'
+
+const StudioPage = lazy(() => import('./sanity/StudioPage').then((module) => ({ default:module.StudioPage})))
 
 function App() {
   return (
@@ -20,8 +22,14 @@ function App() {
 
             <Route path="*" element={<ErrorPage />} />
             
-            {/* Studio'Route (importante el *) */}
-            <Route path="/studio/*" element={<StudioPage />} />
+            {/* Studio Route (importante el *) */}
+            <Route path="/studio/*" 
+              element={
+                <Suspense fallback={<div className='p-8 text-center'>Cargando Sanity Studio...</div>}>
+                  <StudioPage />
+                </Suspense>
+              } 
+            />
           </Routes>
         </main>
         <Footer />
