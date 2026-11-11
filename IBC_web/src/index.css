@@ -2,6 +2,8 @@
 @layer properties, theme, sui, base, components, utilities;
 @import "tailwindcss";
 
+@custom-variant hover (&:hover);
+
 @theme {
   --color-ibc-blue: #b0c3c9;
   --color-ibc-cream: #eceac7;
