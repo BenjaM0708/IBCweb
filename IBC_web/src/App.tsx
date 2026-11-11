@@ -4,7 +4,6 @@ import { ScrollTop } from './components/ScrollTop'
 import Home from './pages/Home'
 import ErrorPage from './pages/ErrorPage'
 import Navbar from './components/Navbar'
-
 import './App.css'
 import Footer from './components/Footer'
 

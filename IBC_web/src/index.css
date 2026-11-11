@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @layer properties, theme, sui, base, components, utilities;
 @import "tailwindcss";
 
 @theme {
-  --color-gray-l: #9CA0A7;
-  --color-gray-m: #8A8B8F;
-  --color-gray-d: #747B83;
+  --color-ibc-blue: #b0c3c9;
+  --color-ibc-cream: #eceac7;
+  --color-ibc-rose: #c0978d;
+  --color-ibc-gray: #5d5e62;
 
-  --color-red-m: #662424;
-  --color-red-d: #1C0C0C;
+  --color-ibc-red-medium: #972426;
+  --color-ibc-red-dark: #1C0C0C;
 
   --font-sans: 'Roboto', sans-serif;
-  --font-display: 'Cinzel', serif;
+  --font-display: 'Cormorant+Garamond', serif;
 }
 
 @layer base {

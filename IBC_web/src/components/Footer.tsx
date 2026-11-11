@@ -5,7 +5,7 @@ export default function Footer() {
 
   return (
     <footer className='w-full'>
-        <div className="ibc-footer-shell bg-red-d flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="ibc-footer-shell bg-ibc-red-dark flex flex-col md:flex-row items-center justify-between gap-6">
     
                         {/* Logo and copyright */}
                         <div className="flex items-center gap-2">

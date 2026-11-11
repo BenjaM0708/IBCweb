@@ -51,7 +51,7 @@ import ibcLogo from "../assets/logos/Nombre-IBC-retransmision-B-1024x373.png";
   return (
     
     <nav className={`fixed top-0 inset-x-0 z-50 transition-transform duration-500 backdrop-blur-md ${hidden && !menuOpen ? '-translate-y-full' : 'translate-y-0'}`}>
-      <div className="ibc-navbar-shell bg-red-m mx-auto flex items-center justify-between">
+      <div className="ibc-navbar-shell bg-ibc-gray mx-auto flex items-center justify-between">
 
         <Link to="/" className="font-display text-2xl font-bold flex items-center gap-2">
           <img src={ibcLogo} alt="Iglesia Bautista Calvario" className="h-8 w-auto" />
@@ -63,23 +63,58 @@ import ibcLogo from "../assets/logos/Nombre-IBC-retransmision-B-1024x373.png";
           overflow-hidden transition-all duration-500 ease-in-out
           ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
         `}>
-          <div className="ibc-navbar-menu flex flex-col gap-1 text-white bg-gray-d">
-            <Link to="/conoce" className="py-2 text-base transition-colors hover:text-black">Conócenos</Link>
-            <Link to="/recursos" className="py-2 text-base transition-colors hover:text-black">Recursos</Link>
-            <Link to="/ministerios" className="py-2 text-base transition-colors hover:text-black">Ministerios</Link>
-            <Link to="/involucramiento" className="py-2 text-base transition-colors hover:text-black">Involúcrate</Link>
-            <Link to="/visita" className="py-2 text-base transition-colors hover:text-black">Visítanos</Link>
+          <div className="ibc-navbar-menu flex flex-col gap-1 bg-ibc-red-dark">
+            <Link to="/conoce" className="py-2 text-lg transition-colors hover:text-ibc-blue">Conócenos</Link>
+            <Link to="/recursos" className="py-2 text-lg transition-colors hover:text-ibc-blue">Recursos</Link>
+            <Link to="/ministerios" className="py-2 text-lg transition-colors hover:text-ibc-blue">Ministerios</Link>
+            <Link to="/involucramiento" className="py-2 text-lg transition-colors hover:text-ibc-blue">Involúcrate</Link>
+            <Link to="/visita" className="py-2 text-lg transition-colors hover:text-ibc-blue">Visítanos</Link>
           </div>
         </div>
         
         {/* Menu Escritorio */}
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-8 text-black">
-            <Link to="/conoce" className={`text-sm transition-colors text-gray-l hover:text-black`}>Conócenos</Link>
-            <Link to="/recursos" className={`text-sm transition-colors text-gray-l hover:text-black`}>Recursos</Link>
-            <Link to="/ministerios" className={`text-sm transition-colors text-gray-l hover:text-black`}>Ministerios</Link>
-            <Link to='/involucramiento' className={`text-sm transition-colors text-gray-l hover:text-black`}>Involúcrate</Link>
-            <Link to="/visita" className={`text-sm transition-colors text-gray-l hover:text-black`}>Visítanos</Link>
+          <div className="hidden md:flex items-center gap-8">
+            <div className="group flex flex-col w-fit">
+              <Link 
+                to="/conoce" 
+                className="text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue"
+               >Conócenos
+              </Link>
+              <span className="block h-0.5 w-full origin-left scale-x-0 bg-ibc-cream transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
+            </div>
+            <div className="group flex flex-col w-fit">
+              <Link 
+                to="/recursos" 
+                className="text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue"
+               >Recursos
+              </Link>
+              <span className="block h-0.5 w-full origin-left scale-x-0 bg-ibc-cream transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
+            </div>
+            <div className="group flex flex-col w-fit">
+              <Link 
+                to="/ministerios" 
+                className="text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue"
+               >Ministerios
+              </Link>
+              <span className="block h-0.5 w-full origin-left scale-x-0 bg-ibc-cream transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
+            </div>
+            <div className="group flex flex-col w-fit">
+              <Link 
+                to="/involucramiento" 
+                className="text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue"
+               >Involúcrate
+              </Link>
+              <span className="block h-0.5 w-full origin-left scale-x-0 bg-ibc-cream transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
+            </div>
+            <div className="group flex flex-col w-fit">
+              <Link 
+                to="/vista" 
+                className="text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue"
+               >Visítanos
+              </Link>
+              <span className="block h-0.5 w-full origin-left scale-x-0 bg-ibc-cream transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
+            </div>
           </div>
 
           <button
