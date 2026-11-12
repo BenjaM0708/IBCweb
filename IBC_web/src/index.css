@@ -13,8 +13,8 @@
   --color-ibc-red-medium: #972426;
   --color-ibc-red-dark: #1C0C0C;
 
-  --font-sans: 'Roboto', sans-serif;
-  --font-display: 'Cormorant Garamond', serif;
+  --font-ibc-text: 'Roboto', sans-serif;
+  --font-ibc-formal: 'Cormorant Garamond', serif;
 }
 
 @layer base {

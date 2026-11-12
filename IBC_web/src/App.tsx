@@ -15,7 +15,7 @@ function App() {
       <ScrollTop />
       <div className='bg-white min-h-screen flex flex-col'>
         <Navbar />
-        <main className='grow pt-20'>
+        <main className='grow'>
           <Routes>
             {/* Normal Route */}
             <Route path="/" element={<Home />} />

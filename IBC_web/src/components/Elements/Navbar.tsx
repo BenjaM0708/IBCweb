@@ -51,7 +51,7 @@ import ibcLogo from "../../assets/logos/Nombre-IBC-retransmision-B-1024x373.png"
     const theme = {
       pathTrue: 'w-full',
       pathFalse: "origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100",
-      text: 'text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue'
+      text: 'text-md text-white text-shadow-black transition-colors duration-300 group-hover:text-ibc-blue'
     }
 
   return (
@@ -69,12 +69,12 @@ import ibcLogo from "../../assets/logos/Nombre-IBC-retransmision-B-1024x373.png"
           overflow-hidden transition-all duration-500 ease-in-out
           ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
         `}>
-          <div className="ibc-navbar-menu flex flex-col gap-1 bg-ibc-red-dark">
-            <Link to="/conoce" className="py-2 text-lg transition-colors hover:text-ibc-blue">Conócenos</Link>
-            <Link to="/recursos" className="py-2 text-lg transition-colors hover:text-ibc-blue">Recursos</Link>
-            <Link to="/ministerios" className="py-2 text-lg transition-colors hover:text-ibc-blue">Ministerios</Link>
-            <Link to="/involucramiento" className="py-2 text-lg transition-colors hover:text-ibc-blue">Involúcrate</Link>
-            <Link to="/visita" className="py-2 text-lg transition-colors hover:text-ibc-blue">Visítanos</Link>
+          <div className="ibc-navbar-menu flex flex-col gap-1 bg-ibc-cream">
+            <Link to="/conoce" className="py-2 text-lg text-shadow-black transition-colors hover:text-ibc-red-dark">Conócenos</Link>
+            <Link to="/recursos" className="py-2 text-lg text-shadow-black transition-colors hover:text-ibc-red-dark">Recursos</Link>
+            <Link to="/ministerios" className="py-2 text-lg text-shadow-black transition-colors hover:text-ibc-red-dark">Ministerios</Link>
+            <Link to="/involucramiento" className="py-2 text-lg text-shadow-black transition-colors hover:text-ibc-red-dark">Involúcrate</Link>
+            <Link to="/visita" className="py-2 text-lg text-shadow-black transition-colors hover:text-ibc-red-dark">Visítanos</Link>
           </div>
         </div>
         
