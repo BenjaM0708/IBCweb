@@ -11,7 +11,11 @@ export default function Home(){
                 <PostList />
             </section>
 
-            
+            {/*Direction Section*/}
+
+
+            {/*Schedule Section*/}
+
          </div>
         </>
     )

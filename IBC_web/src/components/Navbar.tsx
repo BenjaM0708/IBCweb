@@ -47,6 +47,12 @@ import ibcLogo from "../assets/logos/Nombre-IBC-retransmision-B-1024x373.png";
     useEffect(() => {
       setMenuOpen(false);
     }, [pathLocation]);
+    
+    const theme = {
+      pathTrue: 'w-full',
+      pathFalse: "origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100",
+      text: 'text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue'
+    }
 
   return (
     
@@ -78,42 +84,42 @@ import ibcLogo from "../assets/logos/Nombre-IBC-retransmision-B-1024x373.png";
             <div className="group flex flex-col w-fit">
               <Link 
                 to="/conoce" 
-                className="text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue"
+                className={theme.text}
                >Conócenos
               </Link>
-              <span className="block h-0.5 w-full origin-left scale-x-0 bg-ibc-cream transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
+              <span className={`block h-0.5 bg-ibc-cream ${pathLocation.pathname === '/conoce' ? theme.pathTrue : theme.pathFalse}`}></span>
             </div>
             <div className="group flex flex-col w-fit">
               <Link 
                 to="/recursos" 
-                className="text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue"
+                className={theme.text}
                >Recursos
               </Link>
-              <span className="block h-0.5 w-full origin-left scale-x-0 bg-ibc-cream transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
+              <span className={`block h-0.5 bg-ibc-cream ${pathLocation.pathname === '/recursos' ? theme.pathTrue : theme.pathFalse}`}></span>
             </div>
             <div className="group flex flex-col w-fit">
               <Link 
                 to="/ministerios" 
-                className="text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue"
+                className={theme.text}
                >Ministerios
               </Link>
-              <span className="block h-0.5 w-full origin-left scale-x-0 bg-ibc-cream transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
+              <span className={`block h-0.5 bg-ibc-cream ${pathLocation.pathname === '/ministerios' ? theme.pathTrue : theme.pathFalse}`}></span>
             </div>
             <div className="group flex flex-col w-fit">
               <Link 
                 to="/involucramiento" 
-                className="text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue"
+                className={theme.text}
                >Involúcrate
               </Link>
-              <span className="block h-0.5 w-full origin-left scale-x-0 bg-ibc-cream transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
+              <span className={`block h-0.5 bg-ibc-cream ${pathLocation.pathname === '/involucramiento' ? theme.pathTrue : theme.pathFalse}`}></span>
             </div>
             <div className="group flex flex-col w-fit">
               <Link 
-                to="/vista" 
-                className="text-sm text-white transition-colors duration-300 group-hover:text-ibc-blue"
+                to="/visita" 
+                className={theme.text}
                >Visítanos
               </Link>
-              <span className="block h-0.5 w-full origin-left scale-x-0 bg-ibc-cream transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
+              <span className={`block h-0.5 bg-ibc-cream ${pathLocation.pathname === '/visita' ? theme.pathTrue : theme.pathFalse}`}></span>
             </div>
           </div>
 

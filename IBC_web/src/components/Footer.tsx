@@ -15,10 +15,10 @@ export default function Footer() {
     
                         {/* Links */}
                         <div className="ibc-footer-links flex items-center gap-6">
-                            <Link to="/terms" className="text-brand-light text-sm hover:text-brand-light/40 transition-colors">
+                            <Link to="/terms" className="text-sm font-light text-white hover:text-ibc-cream transition-colors">
                                 Terms & Conditions
                             </Link>
-                            <Link to="/privacy" className="text-brand-light text-sm hover:text-black/90 transition-colors">
+                            <Link to="/privacy" className="text-sm font-light text-white hover:text-ibc-cream transition-colors">
                                 Privacy Policy
                             </Link>
                         </div>
