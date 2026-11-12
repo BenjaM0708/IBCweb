@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "typegen:extract": "sanity schema extract",
     "typegen:generate": "sanity typegen generate",
-    "typegen": "npm run typegen:extract && npm run typegen:generate",
+    "typegen": "npm run typegen:extract && npm run typegen:generate && npx sanity deploy",
     "deploy:studio": "sanity deploy"
   },
   "dependencies": {
@@ -18,7 +18,7 @@
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "react-router-dom": "^7.18.3",
-    "sanity": "^6.18.0",
+    "sanity": "^6.23.0",
     "styled-components": "^6.5.3",
     "tailwindcss": "^4.3.3"
   },
