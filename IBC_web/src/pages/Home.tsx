@@ -19,8 +19,15 @@ export default function Home() {
 
       {/* Direction Section */}
       <section id="como-llegar" className="scroll-mt-20">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-          {/* Contenido de Cómo llegar, lo diseñamos en su turno */}
+        <div className="grid grid-cols-1 min-h-svh md:grid-[60%_40%]">
+          <div className="flex flex-col p-3">
+            <h2>¿Cómo Llegar</h2>
+            <p></p>
+          </div>
+
+          <div>
+            <img src="" alt="Iglesia en el mapa"></img>
+          </div>
         </div>
       </section>
     </>
