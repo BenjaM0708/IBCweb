@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import ibcLogo from '../assets/logos/Nombre-IBC-retransmision-B-1024x373.png'
+import ibcLogo from '../../assets/logos/Nombre-IBC-retransmision-B-1024x373.png'
 
 export default function Footer() {
 

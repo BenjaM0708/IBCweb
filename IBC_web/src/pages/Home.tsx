@@ -1,4 +1,4 @@
-import { PostList } from "../components/PostList"
+import { HomeCarousel } from "../components/SanityCalls/HomeCarrousel"
 
 export default function Home(){
 
@@ -7,8 +7,7 @@ export default function Home(){
          <div>
             {/*Welcome Section*/}
             <section>
-                <h1 className="text-3xl text-gray-900 mb-6 pl-4 pb-4">IBC Web</h1>
-                <PostList />
+                <HomeCarousel />
             </section>
 
             {/*Direction Section*/}

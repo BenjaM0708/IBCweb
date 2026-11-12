@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ScrollTop } from './components/ScrollTop'
 import Home from './pages/Home'
 import ErrorPage from './pages/ErrorPage'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import Navbar from './components/Elements/Navbar'
+import Footer from './components/Elements/Footer'
 
 const StudioPage = lazy(() => import('./sanity/StudioPage').then((module) => ({ default:module.StudioPage})))
 

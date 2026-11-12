@@ -1,5 +1,5 @@
-import { client } from "../sanity/sanityClient";   
-import type { Post } from '../../sanity.types'
+import { client } from "../../sanity/sanityClient";   
+import type { Post } from '../../../sanity.types'
 import { useState, useEffect } from 'react'
 
 export const PostList = () => {
@@ -27,7 +27,7 @@ const [ loading, setLoading ] = useState(true)
     }, [])
 
     if(loading){
-        return <div className="text-center py-10 text-gray-500">Loading...</div>
+        return <div className="text-center py-10 text-ibc-gray">Loading...</div>
     }
 
     return(

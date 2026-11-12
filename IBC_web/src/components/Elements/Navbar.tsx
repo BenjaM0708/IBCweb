@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import ibcLogo from "../assets/logos/Nombre-IBC-retransmision-B-1024x373.png";
+import ibcLogo from "../../assets/logos/Nombre-IBC-retransmision-B-1024x373.png";
 
   function Navbar() {
     const [hidden, setHidden] = useState(false);
