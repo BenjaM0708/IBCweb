@@ -37,7 +37,7 @@ export const HomeCarousel = () => {
 
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % slides.length);
-        }, 15000);
+        }, 8000);
 
         return () => clearInterval(interval);
     }, [slides.length]);
