@@ -51,7 +51,7 @@ import ibcLogo from "../../assets/logos/Nombre-IBC-retransmision-B-1024x373.png"
     const theme = {
       pathTrue: 'w-full',
       pathFalse: "origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100",
-      text: 'text-md text-white text-shadow-black transition-colors duration-300 group-hover:text-ibc-blue'
+      text: 'text-md text-white text-shadow-black transition-colors duration-300 group-hover:text-ibc-red-medium'
     }
 
   return (

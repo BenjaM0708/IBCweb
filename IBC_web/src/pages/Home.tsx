@@ -14,8 +14,14 @@ export default function Home() {
 
       {/* Schedule Section */}
       <section id="horarios" className="scroll-mt-20">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-          {/* Contenido de Horarios, lo diseñamos en su turno */}
+        <div className="grid grid-cols-1 bg-ibc-red-medium lg:min-h-svh lg:grid-cols-[60%_40%]">
+          <div>
+
+          </div>
+
+          <div>
+            
+          </div>
         </div>
       </section>
 
@@ -45,7 +51,6 @@ export default function Home() {
               bg-ibc-red-medium px-6 font-display text-xs font-semibold uppercase tracking-widest text-white
               ring-1 ring-ibc-red-medium transition-colors duration-300
               hover:bg-ibc-cream hover:text-ibc-red-medium
-              focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ibc-cream
               sm:h-12 sm:px-7 sm:text-sm md:px-8">
               ¿Cómo Llegar?
               <BsFillGeoAltFill></BsFillGeoAltFill>

@@ -15,6 +15,27 @@
 export declare const internalGroqTypeReferenceTo: unique symbol;
 
 // Source: schema.json
+export type EventList = {
+  _id: string;
+  _type: "eventList";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  dates?: Array<{
+    date?: string;
+    events?: Array<{
+      title?: string;
+      datetime?: string;
+      description?: string;
+      _type: "event";
+      _key: string;
+    }>;
+    _type: "dateGroup";
+    _key: string;
+  }>;
+};
+
 export type SanityImageAssetReference = {
   _ref: string;
   _type: "reference";
@@ -175,6 +196,7 @@ export type Geopoint = {
 };
 
 export type AllSanitySchemaTypes =
+  | EventList
   | SanityImageAssetReference
   | Carousel
   | SanityImageCrop
